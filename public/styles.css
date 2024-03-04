@@ -1,0 +1,80 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: initial;
+}
+
+textarea {
+  font: inherit;
+  border: initial;
+  resize: none;
+  outline: initial; /* create alternative for focus state */
+}
+
+button {
+  font: inherit;
+  border: initial;
+  outline: initial; /* create alternative for focus state */
+  background-color: initial;
+}
+
+/* UTILITIES */
+.u-bold {
+  font-weight: 600;
+}
+
+.u-medium {
+  font-weight: 500;
+}
+
+.u-italic {
+  font-style: italic;
+}
+
+.u-transparent {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* VARIABLES */
+:root {
+  --p-font: "Montserrat", sans-serif;
+  --p-alternate-font: "Barlow Condensed", sans-serif;
+  --h-font: "McLaren", cursive;
+
+  --primary-color: #f1f3f4;
+  --secondary-color: #050b10;
+  --tertiary-color: #050b10;
+  --quaternary-color: #546a7b;
+  --accent-color: #f5ba13;
+}
+body {
+  font-family: var(--p-alternate-font), var(--p-font);
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--p-font);
+  font-weight: 400;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
