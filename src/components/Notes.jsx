@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/components/Notes.css";
 import Note from "./Note";
 import Input from "./Input";
 
 const Notes = () => {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")) || []);
 
   const addItem = (input) => {
     setNotes((prevNotes) => {
@@ -19,6 +19,10 @@ const Notes = () => {
       });
     });
   };
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes])
 
   return (
     <div className="notes__container">
